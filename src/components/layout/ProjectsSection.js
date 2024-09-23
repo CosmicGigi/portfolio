@@ -9,7 +9,7 @@ const ProjectsSection = () => {
       <div className="projects-grid">
         <div className="project">
           <a
-            href="https://github.com/CosmicGigi/Calculator"
+            href="https://gigicalculator.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -27,7 +27,7 @@ const ProjectsSection = () => {
         </div>
         <div className="project">
           <a
-            href="https://github.com/CosmicGigi/kasa_openclassrooms"
+            href="https://gigikasa.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
           >
