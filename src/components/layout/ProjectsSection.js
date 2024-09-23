@@ -79,7 +79,7 @@ const ProjectsSection = () => {
                 Site d'une photographe, avec un référencement local performant.
                 (non responsive)
               </p>
-              <p>HTML, CSS, JavaScrip, JQuery, SEO.</p>
+              <p>HTML, CSS, JavaScript, JQuery, SEO.</p>
             </div>
           </a>
         </div>
@@ -94,7 +94,7 @@ const ProjectsSection = () => {
               style={{ backgroundImage: `url(${events})` }}
             ></div>
             <div className="project-content">
-              <h3>Nina Carducci Photographe</h3>
+              <h3>724 Events</h3>
               <p>Site d'une agence événementielle. (non responsive)</p>
               <p>React, Sass, Jest.</p>
             </div>
