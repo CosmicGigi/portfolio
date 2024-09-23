@@ -1,4 +1,6 @@
 import React from "react";
+import kasaImage from "../../assets/kasa.jpg";
+import calculator from "../../assets/calculator.jpg";
 
 const ProjectsSection = () => {
   return (
@@ -13,10 +15,10 @@ const ProjectsSection = () => {
           >
             <div
               className="project-image"
-              style={{ backgroundImage: "url(path_to_calculator_image.jpg)" }}
+              style={{ backgroundImage: `url(${calculator})` }}
             ></div>
             <div className="project-content" id="projects">
-              <h3>Mon projet de calculatrice</h3>
+              <h3>Calculatrice</h3>
               <p>
                 Calculatrice simple mais fonctionnelle, disponible sur GitHub.
               </p>
@@ -24,17 +26,20 @@ const ProjectsSection = () => {
           </a>
         </div>
         <div className="project">
-          <div
-            className="project-image"
-            style={{ backgroundImage: "url(path_to_todo_image.jpg)" }}
-          ></div>
-          <div className="project-content">
-            <h3>To-Do List Application</h3>
-            <p>
-              Une application de liste de tâches intuitive, optimisée pour
-              mobile.
-            </p>
-          </div>
+          <a
+            href="https://github.com/CosmicGigi/kasa_openclassrooms"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div
+              className="project-image"
+              style={{ backgroundImage: `url(${kasaImage})` }}
+            ></div>
+            <div className="project-content">
+              <h3>Kasa</h3>
+              <p>Une application de location immobilière, type AirBnb.</p>
+            </div>
+          </a>
         </div>
       </div>
     </section>

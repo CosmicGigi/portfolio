@@ -3,20 +3,20 @@
   background: linear-gradient(135deg, #1e1e1e 30%, #333);
   position: relative;
   overflow: hidden;
-  border-top: 5px solid #8e44ad; // Bordure violette en haut
+  border-top: 5px solid #8e44ad;
 
   h2 {
     font-size: 2.5rem;
-    color: #f8f9fa; // Couleur claire pour le titre
+    color: #f8f9fa;
     text-align: center;
     margin-bottom: 30px;
 
     &::after {
       content: "";
       display: block;
-      width: 70px; // Largeur augmentée
+      width: 70px;
       height: 4px;
-      background-color: #8e44ad; // Violette
+      background-color: #8e44ad;
       margin: 20px auto 0;
     }
   }
@@ -24,8 +24,8 @@
   p {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #bbb; // Couleur atténuée
-    text-align: center; // Centrer le texte
+    color: #bbb;
+    text-align: center;
     max-width: 600px;
     margin: 0 auto;
   }
@@ -35,44 +35,43 @@
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
-    margin-top: 40px; // Espacement au-dessus des sous-sections
+    margin-top: 40px;
 
     .subsection {
       background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2); // Bordure subtile
+      border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: 10px;
       padding: 20px;
-      width: 250px; // Largeur fixe pour chaque sous-section
-      text-align: center; // Centrer le texte dans chaque sous-section
-      transition: box-shadow 0.3s ease, background 0.3s ease; // Transition douce
+      width: 250px;
+      text-align: center;
+      transition: box-shadow 0.3s ease, background 0.3s ease;
 
       &:hover {
-        background: rgba(255, 255, 255, 0.2); // Changement de fond au hover
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); // Ombre plus marquée au hover
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
       }
 
       .icon {
         font-size: 3rem;
-        color: #8e44ad; // Couleur d'accent pour les icônes
+        color: #8e44ad;
         margin-bottom: 10px;
       }
 
       h3 {
         margin: 10px 0;
         font-size: 1.5rem;
-        color: #f8f9fa; // Couleur du titre
+        color: #f8f9fa;
       }
 
       p {
         font-size: 1rem;
         line-height: 1.4;
-        color: #bbb; // Couleur du texte
+        color: #bbb;
       }
     }
   }
 }
 
-// Media query pour la responsivité
 @media (max-width: 768px) {
   .about-subsections {
     flex-direction: column;

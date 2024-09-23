@@ -1,7 +1,7 @@
 .skills-section {
   border-top: #8e44ad 5px solid;
   padding: 60px 0;
-  background: #1e1e1e; // Fond sombre pour contraste
+  background: #1e1e1e;
   overflow: hidden;
   position: relative;
 
@@ -22,11 +22,7 @@
 
     &::before {
       left: 0;
-      background: linear-gradient(
-        to right,
-        #1e1e1e,
-        transparent
-      ); // Dégradé subtil
+      background: linear-gradient(to right, #1e1e1e, transparent);
     }
 
     &::after {
@@ -52,11 +48,11 @@
 
     li {
       display: inline-block;
-      padding: 0; // Retirer les bordures autour des mots
-      margin: 0 60px; // Espacement plus important pour chaque mot
-      font-size: 1.5rem; // Taille légèrement augmentée
+      padding: 0;
+      margin: 0 60px;
+      font-size: 1.5rem;
       font-weight: 700;
-      color: #f8f9fa; // Couleur claire
+      color: #f8f9fa;
       text-transform: uppercase;
       letter-spacing: 2px;
       position: relative;
@@ -64,20 +60,19 @@
       cursor: pointer;
 
       &:hover {
-        color: #8e44ad; // Accent violet au hover
-        transform: scale(1.1); // Légère mise en avant lors du hover
+        color: #8e44ad;
+        transform: scale(1.1);
       }
     }
   }
 }
 
-// Media query pour la responsivité
 @media (max-width: 768px) {
   .skills-section {
     .skills-list {
       li {
         font-size: 1.2rem;
-        margin: 0 30px; // Ajustement des marges
+        margin: 0 30px;
       }
     }
   }

@@ -17,7 +17,8 @@ const AboutSection = () => {
           <h3>Développeur Passionné</h3>
           <p>
             Je mets à profit mes compétences pour aider mes clients à atteindre
-            leurs objectifs.
+            leurs objectifs, et je cherche à progresser chaque jour avec de
+            nouveaux langages et frameworks.
           </p>
         </div>
         <div className="subsection">
@@ -34,7 +35,8 @@ const AboutSection = () => {
           <h3>Aventurier dans l'âme</h3>
           <p>
             J'aime explorer de nouveaux horizons et découvrir ce que la vie a à
-            offrir.
+            offrir. La curiosité est une qualité essentielle pour s'épanouir
+            dans ce monde.
           </p>
         </div>
       </div>

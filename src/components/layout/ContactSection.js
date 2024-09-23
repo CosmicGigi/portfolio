@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPhoneAlt } from "@fortawesome/free-solid-svg-icons"; // Importation de l'icône
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -49,8 +51,18 @@ const ContactSection = () => {
 
   return (
     <section className="contact-section" id="contact">
-      <h2>Contactez-moi</h2>
-      <p>Envie de collaborer ? Laissez-moi un message !</p>
+      <h2>Contactez-moi et évoluons ensemble</h2>
+      <p>
+        Envie de collaborer ? Laissez-moi un message ou appelez-moi directement
+        :
+      </p>
+
+      <p>
+        <a href="tel:+33666010016" className="phone-link">
+          <FontAwesomeIcon icon={faPhoneAlt} /> 06.66.01.00.16
+        </a>
+      </p>
+
       <form className="contact-form" onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">Nom</label>

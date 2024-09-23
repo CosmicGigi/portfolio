@@ -1,23 +1,18 @@
 .contact-section {
-  background: linear-gradient(135deg, #1e1e1e 30%, #333);
   padding: 80px 0;
-  background: linear-gradient(
-    135deg,
-    #1e1e1e 30%,
-    #333
-  ); // Dégradé sombre similaire
+  background: linear-gradient(135deg, #1e1e1e 30%, #333);
   text-align: center;
-  border-top: 5px solid #8e44ad; // Bordure violette en haut
+  border-top: 5px solid #8e44ad;
 
   h2 {
     font-size: 2.5rem;
-    color: #f8f9fa; // Couleur claire pour le titre
+    color: #f8f9fa;
     margin-bottom: 20px;
   }
 
   p {
     font-size: 1.2rem;
-    color: #bbb; // Couleur atténuée
+    color: #bbb;
     margin-bottom: 40px;
   }
 
@@ -25,12 +20,7 @@
     max-width: 600px;
     margin: 0 auto;
     padding: 30px;
-    background-color: rgba(
-      44,
-      44,
-      44,
-      0.9
-    ); // Fond gris sombre avec transparence
+    background-color: rgba(44, 44, 44, 0.9);
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 
@@ -49,30 +39,20 @@
       textarea {
         width: 100%;
         padding: 10px;
-        border: 1px solid #444; // Bordure sombre
+        border: 1px solid #444;
         border-radius: 4px;
         font-size: 1rem;
-        background-color: #333; // Fond sombre des champs
-        color: #f8f9fa; // Couleur claire
+        background-color: #333;
+        color: #f8f9fa;
 
         &::placeholder {
-          color: rgba(
-            142,
-            68,
-            173,
-            0.7
-          ); // Couleur violet clair pour le placeholder
+          color: rgba(142, 68, 173, 0.7);
         }
 
         &:focus {
           outline: none;
-          border-color: #6c3483; // Violet plus foncé au focus
-          background-color: rgba(
-            108,
-            52,
-            83,
-            0.1
-          ); // Fond léger violet au focus
+          border-color: #6c3483;
+          background-color: rgba(108, 52, 83, 0.1);
         }
       }
 
@@ -84,7 +64,7 @@
 
     .submit-button {
       padding: 12px 30px;
-      background: linear-gradient(45deg, #8e44ad, #6c3483); // Gradient violet
+      background: linear-gradient(45deg, #8e44ad, #6c3483);
       color: #fff;
       border: none;
       border-radius: 25px;
@@ -96,14 +76,41 @@
         transform 0.3s ease;
 
       &:hover {
-        background: linear-gradient(
-          45deg,
-          #9b59b6,
-          #8e44ad
-        ); // Gradient au survol
+        background: linear-gradient(45deg, #9b59b6, #8e44ad);
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-        transform: scale(1.05); // Zoom léger
+        transform: scale(1.05);
       }
+    }
+  }
+}
+
+.phone-link {
+  display: inline-block;
+  padding: 12px 30px;
+  background: linear-gradient(45deg, #8e44ad, #6c3483);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.4s ease, box-shadow 0.4s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+  i {
+    margin-right: 8px;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    background: linear-gradient(45deg, #9b59b6, #8e44ad);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+
+    i {
+      transform: rotate(15deg) scale(1.2);
     }
   }
 }

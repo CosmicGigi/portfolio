@@ -1,12 +1,12 @@
 .projects-section {
-  border-top: 5px solid #8e44ad; // Bordure violette en haut
+  border-top: 5px solid #8e44ad;
   padding: 80px 0;
-  background-color: #1e1e1e; // Fond sombre pour contraster
+  background-color: #1e1e1e;
 
   h2 {
     text-align: center;
     font-size: 2.5rem;
-    color: #f8f9fa; // Couleur claire
+    color: #f8f9fa;
     margin-bottom: 50px;
     position: relative;
 
@@ -15,7 +15,7 @@
       display: block;
       width: 50px;
       height: 3px;
-      background-color: #8e44ad; // Couleur violette
+      background-color: #8e44ad;
       margin: 20px auto 0;
     }
   }
@@ -30,21 +30,21 @@
   }
 
   .project {
-    background-color: #2c2c2c; // Fond gris sombre pour chaque projet
+    background-color: #2c2c2c;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     &:hover {
-      transform: scale(1.05); // Légère mise à l'échelle
+      transform: scale(1.05);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     }
 
     .project-image {
       height: 220px;
       background-size: cover;
-      background-position: center;
+      background-position: top;
       position: relative;
 
       &::after {
@@ -54,19 +54,14 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(
-          142,
-          68,
-          173,
-          0.4
-        ); // Couleur violette semi-transparente
+        background: rgba(142, 68, 173, 0.4);
         opacity: 0;
         transition: opacity 0.3s ease;
       }
     }
 
     &:hover .project-image::after {
-      opacity: 1; // Affiche le dégradé au survol
+      opacity: 1;
     }
 
     .project-content {
@@ -74,13 +69,13 @@
 
       h3 {
         font-size: 1.5rem;
-        color: #f8f9fa; // Couleur claire
+        color: #f8f9fa;
         margin-bottom: 5px;
       }
 
       p {
         font-size: 0.95rem;
-        color: #bbb; // Couleur atténuée
+        color: #bbb;
       }
     }
   }

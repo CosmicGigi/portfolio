@@ -23,7 +23,7 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 60px; // Ajuste selon la hauteur de ton header
+    top: 60px;
     right: 0;
     background: rgba(30, 30, 30, 0.95);
     width: 200px;
@@ -52,7 +52,7 @@
           transition: color 0.3s;
 
           &:hover {
-            color: #8e44ad; // Couleur au survol
+            color: #8e44ad;
           }
         }
       }
@@ -60,7 +60,6 @@
   }
 }
 
-// Media query pour la responsivité
 @media (max-width: 768px) {
   .header {
     padding: 10px;
