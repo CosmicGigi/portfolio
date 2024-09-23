@@ -1,0 +1,127 @@
+.contact-section {
+  background: linear-gradient(135deg, #1e1e1e 30%, #333);
+  padding: 80px 0;
+  background: linear-gradient(
+    135deg,
+    #1e1e1e 30%,
+    #333
+  ); // Dégradé sombre similaire
+  text-align: center;
+  border-top: 5px solid #8e44ad; // Bordure violette en haut
+
+  h2 {
+    font-size: 2.5rem;
+    color: #f8f9fa; // Couleur claire pour le titre
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: #bbb; // Couleur atténuée
+    margin-bottom: 40px;
+  }
+
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: rgba(
+      44,
+      44,
+      44,
+      0.9
+    ); // Fond gris sombre avec transparence
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+
+    .form-group {
+      margin-bottom: 20px;
+      text-align: left;
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 1rem;
+        color: #f8f9fa;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #444; // Bordure sombre
+        border-radius: 4px;
+        font-size: 1rem;
+        background-color: #333; // Fond sombre des champs
+        color: #f8f9fa; // Couleur claire
+
+        &::placeholder {
+          color: rgba(
+            142,
+            68,
+            173,
+            0.7
+          ); // Couleur violet clair pour le placeholder
+        }
+
+        &:focus {
+          outline: none;
+          border-color: #6c3483; // Violet plus foncé au focus
+          background-color: rgba(
+            108,
+            52,
+            83,
+            0.1
+          ); // Fond léger violet au focus
+        }
+      }
+
+      textarea {
+        height: 150px;
+        resize: vertical;
+      }
+    }
+
+    .submit-button {
+      padding: 12px 30px;
+      background: linear-gradient(45deg, #8e44ad, #6c3483); // Gradient violet
+      color: #fff;
+      border: none;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      font-weight: 600;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      transition: background 0.4s ease, box-shadow 0.4s ease,
+        transform 0.3s ease;
+
+      &:hover {
+        background: linear-gradient(
+          45deg,
+          #9b59b6,
+          #8e44ad
+        ); // Gradient au survol
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        transform: scale(1.05); // Zoom léger
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 60px 20px;
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    .contact-form {
+      padding: 20px;
+    }
+  }
+}

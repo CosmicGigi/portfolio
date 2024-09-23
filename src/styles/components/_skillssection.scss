@@ -1,0 +1,84 @@
+.skills-section {
+  border-top: #8e44ad 5px solid;
+  padding: 60px 0;
+  background: #1e1e1e; // Fond sombre pour contraste
+  overflow: hidden;
+  position: relative;
+
+  .skills-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100px;
+      z-index: 2;
+    }
+
+    &::before {
+      left: 0;
+      background: linear-gradient(
+        to right,
+        #1e1e1e,
+        transparent
+      ); // Dégradé subtil
+    }
+
+    &::after {
+      right: 0;
+      background: linear-gradient(to left, #1e1e1e, transparent);
+    }
+  }
+
+  .skills-track {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll var(--scroll-duration, 25s) linear infinite;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+
+  .skills-list {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: inline-block;
+      padding: 0; // Retirer les bordures autour des mots
+      margin: 0 60px; // Espacement plus important pour chaque mot
+      font-size: 1.5rem; // Taille légèrement augmentée
+      font-weight: 700;
+      color: #f8f9fa; // Couleur claire
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      position: relative;
+      transition: transform 0.3s ease, color 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        color: #8e44ad; // Accent violet au hover
+        transform: scale(1.1); // Légère mise en avant lors du hover
+      }
+    }
+  }
+}
+
+// Media query pour la responsivité
+@media (max-width: 768px) {
+  .skills-section {
+    .skills-list {
+      li {
+        font-size: 1.2rem;
+        margin: 0 30px; // Ajustement des marges
+      }
+    }
+  }
+}

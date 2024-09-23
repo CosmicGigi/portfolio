@@ -1,0 +1,94 @@
+.intro-section {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #1e1e1e;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      to bottom,
+      rgba(142, 68, 173, 0.3),
+      rgba(142, 68, 173, 0) 70%
+    );
+    z-index: 1;
+    filter: blur(15px);
+  }
+
+  .profile-image {
+    width: 280px;
+    height: 280px;
+    border-radius: 25%;
+    margin-bottom: 20px;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.5);
+
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  p {
+    font-size: 1.5rem;
+    color: #ddd;
+    max-width: 600px;
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.5);
+
+    @media (max-width: 768px) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &::after {
+    content: "< />";
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.1);
+    font-family: "Courier New", monospace;
+    z-index: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-section {
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+
+    .profile-image {
+      width: 180px;
+      height: 180px;
+    }
+  }
+}

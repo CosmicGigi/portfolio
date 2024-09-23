@@ -1,0 +1,72 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 10px;
+  transition: all 0.4s ease;
+
+  .menu-toggle {
+    background: transparent;
+    border: none;
+    color: #f8f9fa;
+    font-size: 1.5rem;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; // Ajuste selon la hauteur de ton header
+    right: 0;
+    background: rgba(30, 30, 30, 0.95);
+    width: 200px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+
+    &.active {
+      transform: translateX(0);
+    }
+
+    .nav-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin-bottom: 15px;
+
+        a {
+          color: #f8f9fa;
+          text-decoration: none;
+          font-size: 1rem;
+          font-weight: 500;
+          transition: color 0.3s;
+
+          &:hover {
+            color: #8e44ad; // Couleur au survol
+          }
+        }
+      }
+    }
+  }
+}
+
+// Media query pour la responsivité
+@media (max-width: 768px) {
+  .header {
+    padding: 10px;
+
+    .menu-toggle {
+      font-size: 1.2rem;
+    }
+  }
+}

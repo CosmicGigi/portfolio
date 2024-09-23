@@ -1,0 +1,85 @@
+.about-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #1e1e1e 30%, #333);
+  position: relative;
+  overflow: hidden;
+  border-top: 5px solid #8e44ad; // Bordure violette en haut
+
+  h2 {
+    font-size: 2.5rem;
+    color: #f8f9fa; // Couleur claire pour le titre
+    text-align: center;
+    margin-bottom: 30px;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 70px; // Largeur augmentée
+      height: 4px;
+      background-color: #8e44ad; // Violette
+      margin: 20px auto 0;
+    }
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #bbb; // Couleur atténuée
+    text-align: center; // Centrer le texte
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .about-subsections {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px; // Espacement au-dessus des sous-sections
+
+    .subsection {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2); // Bordure subtile
+      border-radius: 10px;
+      padding: 20px;
+      width: 250px; // Largeur fixe pour chaque sous-section
+      text-align: center; // Centrer le texte dans chaque sous-section
+      transition: box-shadow 0.3s ease, background 0.3s ease; // Transition douce
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.2); // Changement de fond au hover
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); // Ombre plus marquée au hover
+      }
+
+      .icon {
+        font-size: 3rem;
+        color: #8e44ad; // Couleur d'accent pour les icônes
+        margin-bottom: 10px;
+      }
+
+      h3 {
+        margin: 10px 0;
+        font-size: 1.5rem;
+        color: #f8f9fa; // Couleur du titre
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.4;
+        color: #bbb; // Couleur du texte
+      }
+    }
+  }
+}
+
+// Media query pour la responsivité
+@media (max-width: 768px) {
+  .about-subsections {
+    flex-direction: column;
+    align-items: center;
+
+    .subsection {
+      width: 90%;
+    }
+  }
+}
