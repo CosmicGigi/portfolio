@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhoneAlt } from "@fortawesome/free-solid-svg-icons"; // Importation de l'icône
+import { faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({

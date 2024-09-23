@@ -4,6 +4,7 @@ import {
   faCode,
   faRunning,
   faCompass,
+  faVideo,
 } from "@fortawesome/free-solid-svg-icons";
 
 const AboutSection = () => {
@@ -29,6 +30,14 @@ const AboutSection = () => {
             créativité. L'art et le développement partagent une beauté : celle
             de transformer des idées en réalité.
           </p>
+          <a
+            href="https://youtu.be/h9mo-1cM8Z8"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="video-link"
+          >
+            <FontAwesomeIcon icon={faVideo} className="youtube-icon" />
+          </a>
         </div>
         <div className="subsection">
           <FontAwesomeIcon icon={faCompass} className="icon" />

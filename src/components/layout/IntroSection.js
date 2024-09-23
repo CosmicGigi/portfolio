@@ -1,5 +1,5 @@
 import React from "react";
-import profileImage from "../../assets/gigi.jpeg"; // Remplace par le chemin de ton image
+import profileImage from "../../assets/gigi.jpeg";
 
 const IntroSection = () => {
   return (
