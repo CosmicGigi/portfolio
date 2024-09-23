@@ -14,6 +14,7 @@ const SkillsSection = () => {
       "Node.js",
       "MongoDB",
       "Jest",
+      "JQuery",
       "SEO",
       "Git",
       "Figma",
