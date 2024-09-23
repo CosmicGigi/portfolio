@@ -1,25 +1,26 @@
 .intro-section {
-  height: 60vh;
+  height: 70vh; // Augmenté pour plus d'espace
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   background: #1e1e1e;
-  padding: 20px;
+  padding: 40px 20px; // Plus de padding en haut et en bas
   position: relative;
   overflow: hidden;
 
   &::before {
     content: "";
     position: absolute;
-    top: -50%;
+    top: -60%; // Ajusté pour un meilleur positionnement
     left: -50%;
     width: 200%;
     height: 200%;
     background: linear-gradient(
       to bottom,
-      rgba(142, 68, 173, 0.3),
+      rgba(142, 68, 173, 0.4),
+      // Légèrement plus opaque
       rgba(142, 68, 173, 0) 70%
     );
     z-index: 1;
@@ -29,7 +30,7 @@
   .profile-image {
     width: 280px;
     height: 280px;
-    border-radius: 25%;
+    border-radius: 50%; // Forme ronde pour une meilleure esthétique
     margin-bottom: 20px;
     object-fit: cover;
     position: relative;
@@ -44,6 +45,7 @@
     position: relative;
     z-index: 2;
     text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s; // Animation ajoutée
 
     @media (max-width: 768px) {
       font-size: 2.5rem;
@@ -59,6 +61,7 @@
     position: relative;
     z-index: 2;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1.2s; // Animation ajoutée
 
     @media (max-width: 768px) {
       font-size: 1.2rem;
@@ -77,9 +80,21 @@
   }
 }
 
+// Ajout de l'animation fadeIn
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 768px) {
   .intro-section {
-    h2 {
+    h1 {
       font-size: 2.5rem;
     }
 
