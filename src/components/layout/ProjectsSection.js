@@ -77,8 +77,9 @@ const ProjectsSection = () => {
               <h3>Nina Carducci Photographe</h3>
               <p>
                 Site d'une photographe, avec un référencement local performant.
+                (non responsive)
               </p>
-              <p>HTML, CSS, JavaScrip, JQuery, SEO</p>
+              <p>HTML, CSS, JavaScrip, JQuery, SEO.</p>
             </div>
           </a>
         </div>
@@ -94,8 +95,8 @@ const ProjectsSection = () => {
             ></div>
             <div className="project-content">
               <h3>Nina Carducci Photographe</h3>
-              <p>Site d'une agence événementielle.</p>
-              <p>React, Sass, Jest</p>
+              <p>Site d'une agence événementielle. (non responsive)</p>
+              <p>React, Sass, Jest.</p>
             </div>
           </a>
         </div>
