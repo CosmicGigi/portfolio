@@ -52,17 +52,14 @@
         background: rgba(255, 255, 255, 0.3);
         color: #fff;
         transform: scale(1.05);
-        transform: scale(1.05); // Ajout d'un effet de zoom
+        transform: scale(1.05);
       }
 
       .icon {
         font-size: 3rem;
         color: #8e44ad;
         transition: color 0.3s ease;
-        transition: color 0.3s ease; // Transition pour l'icône
-
         color: #f8f9fa;
-        color: #f8f9fa; // Changer la couleur de l'icône au survol
       }
     }
 
@@ -71,9 +68,7 @@
       font-size: 1.5rem;
       color: #f8f9fa;
       transition: color 0.3s ease;
-
       color: #8e44ad;
-      color: #8e44ad; // Changer la couleur du titre au survol
     }
   }
 
