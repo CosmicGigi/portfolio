@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
@@ -6,63 +6,57 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const toggleMenu = useCallback(() => {
+    setIsMenuOpen((prev) => !prev);
+  }, []);
 
-  const handleClickOutside = (event) => {
+  const handleClickOutside = useCallback((event) => {
     if (menuRef.current && !menuRef.current.contains(event.target)) {
       setIsMenuOpen(false);
     }
-  };
+  }, []);
 
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, []);
+  }, [handleClickOutside]);
 
   return (
     <header className={`header ${isMenuOpen ? "open" : ""}`}>
-      <button className="menu-toggle" onClick={toggleMenu}>
+      <button
+        className="menu-toggle"
+        onClick={toggleMenu}
+        aria-label="Toggle menu"
+      >
         <FontAwesomeIcon icon={faBars} />
       </button>
       <nav className={`nav ${isMenuOpen ? "active" : ""}`} ref={menuRef}>
         <ul className="nav-list">
-          <li>
-            <a href="#intro" onClick={toggleMenu}>
-              Accueil
-            </a>
-          </li>
-          <li>
-            <a href="#skills" onClick={toggleMenu}>
-              Compétences
-            </a>
-          </li>
-          <li>
-            <a href="#projects" onClick={toggleMenu}>
-              Projets
-            </a>
-          </li>
-          <li>
-            <a href="#about" onClick={toggleMenu}>
-              À propos
-            </a>
-          </li>
-          <li>
-            <a href="#contact" onClick={toggleMenu}>
-              Contact
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://github.com/Cosmicgigi"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={toggleMenu}
-            >
-              GitHub
-            </a>
-          </li>
+          {[
+            { href: "#intro", label: "Accueil" },
+            { href: "#skills", label: "Compétences" },
+            { href: "#projects", label: "Projets" },
+            { href: "#about", label: "À propos" },
+            { href: "#contact", label: "Contact" },
+            {
+              href: "https://github.com/Cosmicgigi",
+              label: "GitHub",
+              external: true,
+            },
+          ].map((item) => (
+            <li key={item.href}>
+              <a
+                href={item.href}
+                onClick={toggleMenu}
+                target={item.external ? "_blank" : "_self"}
+                rel={item.external ? "noopener noreferrer" : undefined}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>
