@@ -9,6 +9,7 @@
   padding: 40px 20px;
   position: relative;
   overflow: hidden;
+  animation: fadeIn 1.2s;
 
   &::before {
     content: "";
@@ -60,7 +61,6 @@
     position: relative;
     z-index: 2;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.5);
-    animation: fadeIn 1.2s;
 
     @media (max-width: 768px) {
       font-size: 1.2rem;

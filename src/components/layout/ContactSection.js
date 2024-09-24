@@ -52,14 +52,11 @@ const ContactSection = () => {
   return (
     <section className="contact-section" id="contact">
       <h2>Contactez-moi et évoluons ensemble</h2>
-      <p>
-        Envie de collaborer ? Laissez-moi un message ou appelez-moi directement
-        :
-      </p>
 
       <p>
         <a href="tel:+33666010016" className="phone-link">
-          <FontAwesomeIcon icon={faPhoneAlt} /> 06.66.01.00.16
+          Appelez-moi
+          <FontAwesomeIcon icon={faPhoneAlt} />
         </a>
       </p>
 
