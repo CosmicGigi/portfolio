@@ -53,6 +53,16 @@ const Header = () => {
               Contact
             </a>
           </li>
+          <li>
+            <a
+              href="https://github.com/Cosmicgigi"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={toggleMenu}
+            >
+              GitHub
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
