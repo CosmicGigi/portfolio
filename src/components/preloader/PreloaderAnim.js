@@ -18,7 +18,6 @@ const animateTextIn = (tl) => {
   tl.from(".texts-container span", {
     duration: 0.3,
     opacity: 1,
-    y: 20,
     stagger: 0.1,
     ease: "back.out(1.5)",
   });
@@ -29,20 +28,20 @@ const animateTextOut = (tl) => {
     duration: 0.2,
     delay: 1,
     opacity: 0,
-    y: -100,
     stagger: 0.1,
     ease: "power1.in",
   });
 };
 
-const hidePreloader = (tl, setLoading) => {
+const hidePreloader = (tl, setLoading, setIsAnimationComplete) => {
   tl.to(".preloader", {
-    duration: 0.5,
+    duration: 1,
     opacity: 0,
     scale: 1.1,
     ease: "power2.out",
     onComplete: () => {
       setLoading(false);
+      setIsAnimationComplete(true);
     },
   });
 };
@@ -51,18 +50,23 @@ export const preLoaderAnim = (setLoading) => {
   const tl = createTimeline();
   let isAnimationComplete = false;
 
+  const setIsAnimationComplete = (value) => {
+    isAnimationComplete = value;
+  };
+
   const startAnimation = () => {
     tl.add(animateBodyOverflow("hidden", 0.1));
     showTextContainer(tl);
     animateTextIn(tl);
     animateTextOut(tl);
     tl.add(animateBodyOverflow("scroll", 0.1));
-    hidePreloader(tl, setLoading);
+    hidePreloader(tl, setLoading, setIsAnimationComplete);
   };
 
   startAnimation();
 
-  document.querySelector(".preloader").addEventListener("click", () => {
+  const preloaderElement = document.querySelector(".preloader");
+  const handleClick = () => {
     if (!isAnimationComplete) {
       tl.kill();
       gsap.to(".preloader", {
@@ -76,5 +80,11 @@ export const preLoaderAnim = (setLoading) => {
       });
       animateBodyOverflow("scroll", 0.1);
     }
-  });
+  };
+
+  preloaderElement.addEventListener("click", handleClick);
+
+  return () => {
+    preloaderElement.removeEventListener("click", handleClick);
+  };
 };
