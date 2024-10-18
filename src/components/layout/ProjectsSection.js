@@ -85,7 +85,7 @@ const ProjectsSection = () => {
         </div>
         <div className="project">
           <a
-            href="https://724eventsproject.vercel.app/"
+            href="https://724-events-nine.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
           >
