@@ -5,6 +5,7 @@ import ProjectsSection from "./layout/ProjectsSection";
 import AboutSection from "./layout/AboutSection";
 import ContactSection from "./layout/ContactSection";
 import Header from "./layout/Header";
+import Footer from "./layout/Footer";
 
 const Main = () => {
   return (
@@ -15,6 +16,7 @@ const Main = () => {
       <ProjectsSection />
       <AboutSection />
       <ContactSection />
+      <Footer />
     </main>
   );
 };
