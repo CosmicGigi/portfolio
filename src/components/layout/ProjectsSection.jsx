@@ -1,9 +1,10 @@
 import React from "react";
 import kasaImage from "../../assets/kasa.jpg";
-import calculator from "../../assets/calculator.jpg";
+import labellesuzette from "../../assets/lbs.jpg";
 import booki from "../../assets/booki.jpg";
 import ninaCarducci from "../../assets/ninacarducci.jpg";
 import events from "../../assets/724events.jpg";
+import portfolio from "../../assets/portfolio.jpg";
 
 const ProjectsSection = () => {
   return (
@@ -12,20 +13,21 @@ const ProjectsSection = () => {
       <div className="projects-grid">
         <div className="project">
           <a
-            href="https://gigicalculator.vercel.app/"
+            href="https://labellesuzette.fr"
             target="_blank"
             rel="noopener noreferrer"
           >
             <div
               className="project-image"
-              style={{ backgroundImage: `url(${calculator})` }}
+              style={{ backgroundImage: `url(${labellesuzette})` }}
             ></div>
             <div className="project-content" id="projects">
-              <h3>Calculatrice</h3>
+              <h3>La Belle Suzette</h3>
               <p>
-                Calculatrice simple et fonctionnelle, disponible sur GitHub.
+                Site d'un restaurant Bordelais, avec formulaire de réservation
+                et SEO optimisé.
               </p>
-              <p>React, Sass</p>
+              <p>Vite.js, React, Sass, SEO, Formik</p>
             </div>
           </a>
         </div>
@@ -43,6 +45,23 @@ const ProjectsSection = () => {
               <h3>Kasa</h3>
               <p>Une application de location immobilière, type AirBnb.</p>
               <p>React, Sass</p>
+            </div>
+          </a>
+        </div>
+        <div className="project">
+          <a
+            href="https://gigicode.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div
+              className="project-image"
+              style={{ backgroundImage: `url(${portfolio})` }}
+            ></div>
+            <div className="project-content">
+              <h3>Portfolio</h3>
+              <p>Création de mon Portfolio personnel.</p>
+              <p>React, Sass, Formik</p>
             </div>
           </a>
         </div>

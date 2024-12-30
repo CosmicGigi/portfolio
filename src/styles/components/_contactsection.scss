@@ -1,6 +1,6 @@
 .contact-section {
   padding: 60px 0;
-  background: linear-gradient(135deg, #1e1e1e 30%, #333);
+  background: linear-gradient(180deg, #1e1e1e 30%, #333);
   text-align: center;
   border-top: 5px solid #8e44ad;
 
@@ -8,6 +8,14 @@
     font-size: 2.5rem;
     color: #f8f9fa;
     margin-bottom: 40px;
+    &::after {
+      content: "";
+      display: block;
+      width: 70px;
+      height: 4px;
+      background-color: #8e44ad;
+      margin: 20px auto 0;
+    }
   }
 
   p {
