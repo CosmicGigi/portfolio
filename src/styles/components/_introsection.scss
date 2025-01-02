@@ -43,7 +43,6 @@
     margin-bottom: 20px;
     position: relative;
     z-index: 2;
-    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.5);
     animation: fadeIn 1s;
 
     @media (max-width: 768px) {
@@ -59,7 +58,6 @@
     line-height: 1.4;
     position: relative;
     z-index: 2;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.5);
 
     @media (max-width: 768px) {
       font-size: 1.2rem;
@@ -72,7 +70,7 @@
     bottom: 20px;
     right: 20px;
     font-size: 3rem;
-    color: rgba(255, 255, 255, 0.1);
+    color: white;
     font-family: "Courier New", monospace;
     z-index: 2;
   }
