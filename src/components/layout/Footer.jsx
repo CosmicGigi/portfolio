@@ -2,25 +2,37 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
+const socialLinks = [
+  {
+    href: "https://www.github.com/CosmicGigi",
+    label: "Visitez mon profil GitHub",
+    icon: faGithub,
+    className: "github",
+  },
+];
+
 const Footer = () => {
   return (
-    <div className="footer">
+    <footer className="footer">
       <h5>© 2024 GIGI CODE. Tous droits réservés.</h5>
-      <div className="social">
+      <nav className="social">
         <ul>
-          <li>
-            <a
-              href="https://www.github.com/CosmicGigi"
-              className="github"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FontAwesomeIcon icon={faGithub} />
-            </a>
-          </li>
+          {socialLinks.map((link, index) => (
+            <li key={index}>
+              <a
+                href={link.href}
+                className={link.className}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={link.label}
+              >
+                <FontAwesomeIcon icon={link.icon} />
+              </a>
+            </li>
+          ))}
         </ul>
-      </div>
-    </div>
+      </nav>
+    </footer>
   );
 };
 

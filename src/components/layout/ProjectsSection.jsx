@@ -1,124 +1,93 @@
 import React from "react";
-import kasaImage from "../../assets/kasa.jpg";
-import labellesuzette from "../../assets/lbs.jpg";
-import booki from "../../assets/booki.jpg";
-import ninaCarducci from "../../assets/ninacarducci.jpg";
-import events from "../../assets/724events.jpg";
-import portfolio from "../../assets/portfolio.jpg";
+import kasaImage from "../../assets/kasa.webp";
+import labellesuzette from "../../assets/lbs.webp";
+import booki from "../../assets/booki.webp";
+import ninaCarducci from "../../assets/ninacarducci.webp";
+import events from "../../assets/724events.webp";
+import portfolio from "../../assets/portfolio.webp";
+
+const projects = [
+  {
+    title: "La Belle Suzette",
+    description:
+      "Site d'un restaurant bordelais, avec formulaire de réservation et SEO optimisé.",
+    image: labellesuzette,
+    url: "https://labellesuzette.fr",
+    tags: ["Vite.js", "React", "Sass", "SEO", "Formik"],
+  },
+  {
+    title: "Kasa",
+    description: "Une application de location immobilière, type AirBnb.",
+    image: kasaImage,
+    url: "https://gigikasa.vercel.app",
+    tags: ["React", "Sass"],
+  },
+  {
+    title: "Portfolio",
+    description: "Création de mon Portfolio personnel.",
+    image: portfolio,
+    url: "https://gigicode.vercel.app/",
+    tags: ["React", "Sass", "Formik"],
+  },
+  {
+    title: "Booki",
+    description: "Site d'hébergement de vacances, type Booking.",
+    image: booki,
+    url: "https://cosmicgigi.github.io/booki/",
+    tags: ["HTML", "CSS"],
+  },
+  {
+    title: "Nina Carducci Photographe",
+    description:
+      "Site d'une photographe, avec un référencement local performant. (non responsive)",
+    image: ninaCarducci,
+    url: "https://cosmicgigi.github.io/ninacarducci/",
+    tags: ["HTML", "CSS", "JavaScript", "JQuery", "SEO"],
+  },
+  {
+    title: "724 Events",
+    description: "Site d'une agence événementielle. (non responsive)",
+    image: events,
+    url: "https://724-events-nine.vercel.app/",
+    tags: ["React", "Sass", "Jest"],
+  },
+];
 
 const ProjectsSection = () => {
   return (
-    <section className="projects-section">
+    <section className="projects-section" id="projects">
       <h2>Mes Réalisations</h2>
       <div className="projects-grid">
-        <div className="project">
-          <a
-            href="https://labellesuzette.fr"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div
-              className="project-image"
-              style={{ backgroundImage: `url(${labellesuzette})` }}
-            ></div>
-            <div className="project-content" id="projects">
-              <h3>La Belle Suzette</h3>
-              <p>
-                Site d'un restaurant Bordelais, avec formulaire de réservation
-                et SEO optimisé.
-              </p>
-              <p>Vite.js, React, Sass, SEO, Formik</p>
-            </div>
-          </a>
-        </div>
-        <div className="project">
-          <a
-            href="https://gigikasa.vercel.app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div
-              className="project-image"
-              style={{ backgroundImage: `url(${kasaImage})` }}
-            ></div>
-            <div className="project-content">
-              <h3>Kasa</h3>
-              <p>Une application de location immobilière, type AirBnb.</p>
-              <p>React, Sass</p>
-            </div>
-          </a>
-        </div>
-        <div className="project">
-          <a
-            href="https://gigicode.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div
-              className="project-image"
-              style={{ backgroundImage: `url(${portfolio})` }}
-            ></div>
-            <div className="project-content">
-              <h3>Portfolio</h3>
-              <p>Création de mon Portfolio personnel.</p>
-              <p>React, Sass, Formik</p>
-            </div>
-          </a>
-        </div>
-        <div className="project">
-          <a
-            href="https://cosmicgigi.github.io/booki/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div
-              className="project-image"
-              style={{ backgroundImage: `url(${booki})` }}
-            ></div>
-            <div className="project-content">
-              <h3>Booki</h3>
-              <p>Site d'hébergement de vacances, type Booking.</p>
-              <p>HTML, CSS</p>
-            </div>
-          </a>
-        </div>
-        <div className="project">
-          <a
-            href="https://cosmicgigi.github.io/ninacarducci/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div
-              className="project-image"
-              style={{ backgroundImage: `url(${ninaCarducci})` }}
-            ></div>
-            <div className="project-content">
-              <h3>Nina Carducci Photographe</h3>
-              <p>
-                Site d'une photographe, avec un référencement local performant.
-                (non responsive)
-              </p>
-              <p>HTML, CSS, JavaScript, JQuery, SEO.</p>
-            </div>
-          </a>
-        </div>
-        <div className="project">
-          <a
-            href="https://724-events-nine.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div
-              className="project-image"
-              style={{ backgroundImage: `url(${events})` }}
-            ></div>
-            <div className="project-content">
-              <h3>724 Events</h3>
-              <p>Site d'une agence événementielle. (non responsive)</p>
-              <p>React, Sass, Jest.</p>
-            </div>
-          </a>
-        </div>
+        {projects.map((project, index) => (
+          <div className="project" key={index}>
+            <a
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Voir le projet : ${project.title}`}
+            >
+              <div className="project-image-wrapper">
+                <img
+                  src={project.image}
+                  alt={`Aperçu du projet ${project.title}`}
+                  className="project-image"
+                  loading="lazy"
+                />
+              </div>
+              <div className="project-content">
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                <div className="tags">
+                  {project.tags.map((tag, tagIndex) => (
+                    <span className="tag" key={tagIndex}>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </a>
+          </div>
+        ))}
       </div>
     </section>
   );

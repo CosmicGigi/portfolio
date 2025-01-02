@@ -2,6 +2,15 @@ import React, { useState, useEffect, useRef, useCallback } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
+const links = [
+  { href: "#intro", label: "Accueil" },
+  { href: "#skills", label: "Compétences" },
+  { href: "#projects", label: "Projets" },
+  { href: "#about", label: "À propos" },
+  { href: "#contact", label: "Contact" },
+  { href: "https://github.com/Cosmicgigi", label: "GitHub", external: true },
+];
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
@@ -32,28 +41,24 @@ const Header = () => {
       <button
         className="menu-toggle"
         onClick={toggleMenu}
-        aria-label="Toggle menu"
+        aria-label={isMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+        aria-expanded={isMenuOpen}
+        aria-controls="nav-menu"
       >
         <FontAwesomeIcon icon={!isMenuOpen ? faBars : faXmark} />
       </button>
-      <nav className={`nav ${isMenuOpen ? "active" : ""}`} ref={menuRef}>
+      <nav
+        className={`nav ${isMenuOpen ? "active" : ""}`}
+        id="nav-menu"
+        ref={menuRef}
+        aria-hidden={!isMenuOpen}
+      >
         <ul className="nav-list">
-          {[
-            { href: "#intro", label: "Accueil" },
-            { href: "#skills", label: "Compétences" },
-            { href: "#projects", label: "Projets" },
-            { href: "#about", label: "À propos" },
-            { href: "#contact", label: "Contact" },
-            {
-              href: "https://github.com/Cosmicgigi",
-              label: "GitHub",
-              external: true,
-            },
-          ].map((item) => (
+          {links.map((item) => (
             <li key={item.href}>
               <a
                 href={item.href}
-                onClick={toggleMenu}
+                onClick={() => setIsMenuOpen(false)}
                 target={item.external ? "_blank" : "_self"}
                 rel={item.external ? "noopener noreferrer" : undefined}
               >

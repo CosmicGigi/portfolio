@@ -11,9 +11,9 @@ const ContactSection = () => {
   };
 
   const validationSchema = Yup.object({
-    name: Yup.string().required("Le nom est obligatoire."),
+    name: Yup.string().required("Veuillez renseigner votre nom."),
     email: Yup.string()
-      .email("Adresse email invalide.")
+      .email("Veuillez saisir une adresse email valide.")
       .required("L'email est obligatoire."),
     message: Yup.string().required("Le message est obligatoire."),
   });
@@ -33,30 +33,32 @@ const ContactSection = () => {
         },
         "RLn49n7HQa-pYvxtf"
       )
-      .then(
-        () => {
-          setStatus("Message envoyé avec succès !");
-          resetForm();
-        },
-        () => {
-          setStatus("Échec de l'envoi. Veuillez réessayer.");
-        }
-      )
+      .then(() => {
+        setStatus("Votre message a été envoyé avec succès !");
+        resetForm();
+      })
+      .catch(() => {
+        setStatus("Une erreur s'est produite. Veuillez réessayer.");
+      })
       .finally(() => {
         setSubmitting(false);
       });
   };
 
   return (
-    <section className="contact-section" id="contact">
-      <h2>Contactez-moi et évoluons ensemble</h2>
+    <section
+      className="contact-section"
+      id="contact"
+      aria-labelledby="contact-heading"
+    >
+      <h2 id="contact-heading">Contactez-moi et évoluons ensemble</h2>
 
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
       >
-        {({ isSubmitting }) => (
+        {({ isSubmitting, status }) => (
           <Form className="contact-form">
             <div className="form-group">
               <label htmlFor="name">Nom</label>
@@ -64,8 +66,9 @@ const ContactSection = () => {
                 type="text"
                 id="name"
                 name="name"
-                placeholder=""
+                placeholder="Entrez votre nom"
                 className="form-control"
+                aria-required="true"
               />
               <ErrorMessage
                 name="name"
@@ -79,8 +82,9 @@ const ContactSection = () => {
                 type="email"
                 id="email"
                 name="email"
-                placeholder=""
+                placeholder="Votre adresse email"
                 className="form-control"
+                aria-required="true"
               />
               <ErrorMessage
                 name="email"
@@ -94,8 +98,9 @@ const ContactSection = () => {
                 as="textarea"
                 id="message"
                 name="message"
-                placeholder=""
+                placeholder="Votre message"
                 className="form-control"
+                aria-required="true"
               />
               <ErrorMessage
                 name="message"
@@ -107,9 +112,11 @@ const ContactSection = () => {
               type="submit"
               className="submit-button"
               disabled={isSubmitting}
+              aria-disabled={isSubmitting}
             >
               {isSubmitting ? "Envoi en cours..." : "Envoyer"}
             </button>
+            {status && <div className="status-message">{status}</div>}
           </Form>
         )}
       </Formik>

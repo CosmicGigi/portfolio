@@ -1,17 +1,22 @@
 import React from "react";
-import profileImage from "../../assets/gigi.jpeg";
+import profileImage from "../../assets/gigi.webp";
 
 const IntroSection = () => {
   return (
-    <section className="intro-section" id="intro">
+    <header className="intro-section" id="intro">
       <img
         src={profileImage}
-        alt="Guillaume Charpentier"
+        alt="Portrait de Guillaume Charpentier, développeur web"
         className="profile-image"
+        loading="lazy"
       />
       <h1>Guillaume Charpentier</h1>
-      <p>Un développeur à la créativité débordante !</p>
-    </section>
+      <p>
+        Développeur web passionné et créatif, je transforme vos idées en
+        solutions sur mesure, performantes et élégantes. Ensemble, construisons
+        des expériences numériques uniques.
+      </p>
+    </header>
   );
 };
 
