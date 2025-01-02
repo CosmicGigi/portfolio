@@ -1,6 +1,6 @@
 import React from "react";
 import IntroSection from "./layout/IntroSection";
-import SkillsSection from "./layout/SkillsSection";
+// import SkillsSection from "./layout/SkillsSection";
 import ProjectsSection from "./layout/ProjectsSection";
 import AboutSection from "./layout/AboutSection";
 import ContactSection from "./layout/ContactSection";
@@ -12,7 +12,7 @@ const Main = () => {
     <main className="main-container">
       <Header />
       <IntroSection />
-      <SkillsSection />
+      {/* <SkillsSection /> */}
       <ProjectsSection />
       <AboutSection />
       <ContactSection />
