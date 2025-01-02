@@ -116,7 +116,6 @@ const ContactSection = () => {
             >
               {isSubmitting ? "Envoi en cours..." : "Envoyer"}
             </button>
-            {status && <div className="status-message">{status}</div>}
           </Form>
         )}
       </Formik>
