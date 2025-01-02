@@ -38,7 +38,7 @@ const ContactSection = () => {
           setStatus("Message envoyé avec succès !");
           resetForm();
         },
-        (err) => {
+        () => {
           setStatus("Échec de l'envoi. Veuillez réessayer.");
         }
       )
@@ -56,7 +56,7 @@ const ContactSection = () => {
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
       >
-        {({ isSubmitting, status }) => (
+        {({ isSubmitting }) => (
           <Form className="contact-form">
             <div className="form-group">
               <label htmlFor="name">Nom</label>
@@ -110,7 +110,6 @@ const ContactSection = () => {
             >
               {isSubmitting ? "Envoi en cours..." : "Envoyer"}
             </button>
-            {status && <p className="status-message">{status}</p>}
           </Form>
         )}
       </Formik>

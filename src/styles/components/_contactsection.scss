@@ -1,7 +1,5 @@
 .contact-section {
   padding: 60px 0;
-  height: 100vh;
-
   background: linear-gradient(180deg, #1e1e1e 30%, #333);
   text-align: center;
   border-top: 5px solid #8e44ad;
@@ -82,44 +80,13 @@
       cursor: pointer;
       font-weight: 600;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-      transition: background 0.4s ease, box-shadow 0.4s ease,
-        transform 0.3s ease;
+      transition: all 0.4s ease, box-shadow 0.4s ease, transform 0.3s ease;
 
       &:hover {
         background: linear-gradient(45deg, #9b59b6, #8e44ad);
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
         transform: scale(1.05);
       }
-    }
-  }
-}
-
-.phone-link {
-  display: inline-block;
-  padding: 12px 30px;
-  background: linear-gradient(45deg, #8e44ad, #6c3483);
-  color: #fff;
-  border: none;
-  border-radius: 25px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background 0.4s ease, box-shadow 0.4s ease, transform 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-
-  svg {
-    margin-left: 8px;
-    transition: transform 0.3s ease;
-  }
-
-  &:hover {
-    background: linear-gradient(45deg, #9b59b6, #8e44ad);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-    transform: scale(1.05);
-
-    i {
-      transform: rotate(15deg) scale(1.2);
     }
   }
 }

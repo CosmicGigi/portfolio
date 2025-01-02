@@ -1,5 +1,6 @@
 .footer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: #333;
@@ -8,5 +9,15 @@
     font-size: 0.8rem;
     color: #8e44ad;
     margin: 10px;
+  }
+
+  .fa-github {
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 10px;
+
+    &:hover {
+      color: #8e44ad;
+    }
   }
 }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,7 +34,7 @@ const Header = () => {
         onClick={toggleMenu}
         aria-label="Toggle menu"
       >
-        <FontAwesomeIcon icon={faBars} />
+        <FontAwesomeIcon icon={!isMenuOpen ? faBars : faXmark} />
       </button>
       <nav className={`nav ${isMenuOpen ? "active" : ""}`} ref={menuRef}>
         <ul className="nav-list">
