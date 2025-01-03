@@ -4,7 +4,6 @@ import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const links = [
   { href: "#intro", label: "Accueil" },
-  { href: "#skills", label: "Compétences" },
   { href: "#projects", label: "Projets" },
   { href: "#about", label: "À propos" },
   { href: "#contact", label: "Contact" },
