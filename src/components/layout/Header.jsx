@@ -8,7 +8,12 @@ const links = [
   { href: "#projects", label: "Projets" },
   { href: "#about", label: "À propos" },
   { href: "#contact", label: "Contact" },
-  { href: "https://github.com/Cosmicgigi", label: "GitHub", external: true },
+  {
+    href: "https://github.com/Cosmicgigi",
+    label: "GitHub",
+    external: true,
+    className: "nav-link",
+  },
 ];
 
 const Header = () => {

@@ -1,10 +1,11 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import Main from "../components/Main";
 
 const Home = () => {
   return (
     <>
-      <head>
+      <Helmet>
         <title>Guillaume Charpentier - Développeur Web</title>
         <meta
           name="description"
@@ -16,7 +17,7 @@ const Home = () => {
         />
         <meta name="author" content="Guillaume Charpentier" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </head>
+      </Helmet>
       <Main />
     </>
   );
