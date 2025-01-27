@@ -22,7 +22,6 @@ const links = [
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
-  const menuButtonRef = useRef(null);
 
   const toggleMenu = useCallback(() => {
     setIsMenuOpen((prev) => !prev);
@@ -58,7 +57,6 @@ const Header = () => {
         }
         aria-expanded={isMenuOpen}
         aria-controls="nav-menu"
-        ref={menuButtonRef}
       >
         <FontAwesomeIcon icon={!isMenuOpen ? faBars : faXmark} />
       </button>
