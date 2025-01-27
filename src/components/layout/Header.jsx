@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
@@ -21,66 +21,38 @@ const links = [
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const menuRef = useRef(null);
 
-  const toggleMenu = useCallback(() => {
-    setIsMenuOpen((open) => !open);
-  }, []);
-
-  const handleClickOutside = useCallback((event) => {
-    if (
-      menuRef.current &&
-      !menuRef.current.contains(event.target) &&
-      !event.target.closest(".menu-toggle")
-    ) {
-      setIsMenuOpen(false);
-    }
-  }, []);
-
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [handleClickOutside]);
+  const toggleMenu = () => setIsMenuOpen((prev) => !prev);
 
   return (
     <header className={`header ${isMenuOpen ? "open" : ""}`}>
       <button
         className="menu-toggle"
         onClick={toggleMenu}
-        aria-label={
-          isMenuOpen
-            ? "Fermer le menu de navigation"
-            : "Ouvrir le menu de navigation"
-        }
+        aria-label={isMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
         aria-expanded={isMenuOpen}
         aria-controls="nav-menu"
       >
-        <FontAwesomeIcon icon={!isMenuOpen ? faBars : faXmark} />
+        <FontAwesomeIcon icon={isMenuOpen ? faXmark : faBars} />
       </button>
-      <nav
-        className={`nav ${isMenuOpen ? "active" : ""}`}
-        id="nav-menu"
-        ref={menuRef}
-        role="navigation"
-      >
-        <ul className="nav-list">
-          {links.map((item) => (
-            <li key={item.href}>
-              <a
-                href={item.href}
-                onClick={() => setIsMenuOpen(false)}
-                target={item.external ? "_blank" : "_self"}
-                rel={item.external ? "noopener noreferrer" : undefined}
-              >
-                {item.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      {isMenuOpen && (
+        <nav className="nav" id="nav-menu">
+          <ul className="nav-list">
+            {links.map((item) => (
+              <li key={item.href}>
+                <a
+                  href={item.href}
+                  onClick={() => setIsMenuOpen(false)}
+                  target={item.external ? "_blank" : "_self"}
+                  rel={item.external ? "noopener noreferrer" : undefined}
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
     </header>
   );
 };
