@@ -5,33 +5,52 @@ import booki from "../../assets/booki.webp";
 import ninaCarducci from "../../assets/ninacarducci.webp";
 import events from "../../assets/724events.webp";
 import portfolio from "../../assets/portfolio.webp";
+import ateliersignature from "../../assets/ateliersignature.webp";
 
 const projects = [
+  {
+    title: "Atelier Signature",
+    description: "Le site dédié à mon activité en tant qu'auto-entrepreneur.",
+    image: ateliersignature,
+    url: "https://atelier-signature.io",
+    tags: [
+      "React",
+      "Tailwind CSS",
+      "Hero UI",
+      "SEO",
+      "Formik",
+      "Yup",
+      "Calendly",
+    ],
+  },
   {
     title: "La Belle Suzette",
     description:
       "Site d'un restaurant bordelais, avec formulaire de réservation et SEO optimisé.",
     image: labellesuzette,
     url: "https://labellesuzette.fr",
-    tags: ["Vite.js", "React", "Sass", "SEO", "Formik"],
+    tags: ["React", "Sass", "SEO", "Formik", "Yup"],
   },
   {
     title: "Kasa",
-    description: "Une application de location immobilière, type AirBnb.",
+    description:
+      "Une application de location immobilière, répertoriant les différentes informations sur les biens disponibles.",
     image: kasaImage,
     url: "https://gigikasa.vercel.app",
     tags: ["React", "Sass"],
   },
   {
     title: "Portfolio",
-    description: "Création de mon Portfolio personnel.",
+    description:
+      "Création de mon Portfolio professionnel avec la possibilité de me contacter directement.",
     image: portfolio,
     url: "https://gigicode.vercel.app/",
     tags: ["React", "Sass", "Formik"],
   },
   {
     title: "Booki",
-    description: "Site d'hébergement de vacances, type Booking.",
+    description:
+      "Site d'hébergement en location pour les vacances avec les activités disponibles autour.",
     image: booki,
     url: "https://cosmicgigi.github.io/booki/",
     tags: ["HTML", "CSS"],
