@@ -11,7 +11,11 @@ const links = [
     href: "https://github.com/Cosmicgigi",
     label: "GitHub",
     external: true,
-    className: "nav-link",
+  },
+  {
+    href: "https://atelier-signature.io",
+    label: "Atelier Signature",
+    external: true,
   },
 ];
 
@@ -34,29 +38,13 @@ const Header = () => {
     }
   }, []);
 
-  const handleKeyDown = useCallback((event) => {
-    if (event.key === "Escape") {
-      setIsMenuOpen(false);
-      menuButtonRef.current.focus();
-    }
-  }, []);
-
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
-    document.addEventListener("keydown", handleKeyDown);
 
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
-      document.removeEventListener("keydown", handleKeyDown);
     };
-  }, [handleClickOutside, handleKeyDown]);
-
-  useEffect(() => {
-    if (isMenuOpen && menuRef.current) {
-      const firstLink = menuRef.current.querySelector("a");
-      firstLink?.focus();
-    }
-  }, [isMenuOpen]);
+  }, [handleClickOutside]);
 
   return (
     <header className={`header ${isMenuOpen ? "open" : ""}`}>
