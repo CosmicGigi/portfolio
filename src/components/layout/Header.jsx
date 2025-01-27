@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
@@ -7,11 +7,7 @@ const links = [
   { href: "#projects", label: "Projets" },
   { href: "#about", label: "À propos" },
   { href: "#contact", label: "Contact" },
-  {
-    href: "https://github.com/Cosmicgigi",
-    label: "GitHub",
-    external: true,
-  },
+  { href: "https://github.com/Cosmicgigi", label: "GitHub", external: true },
   {
     href: "https://atelier-signature.io",
     label: "Atelier Signature",
@@ -22,7 +18,27 @@ const links = [
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => setIsMenuOpen((prev) => !prev);
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  useEffect(() => {
+    const handleClick = (event) => {
+      if (
+        isMenuOpen &&
+        !event.target.closest(".menu-toggle") &&
+        !event.target.closest(".nav")
+      ) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    if (isMenuOpen) {
+      document.addEventListener("mousedown", handleClick);
+    } else {
+      document.removeEventListener("mousedown", handleClick);
+    }
+
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, [isMenuOpen]);
 
   return (
     <header className={`header ${isMenuOpen ? "open" : ""}`}>
