@@ -14,7 +14,7 @@ const socialLinks = [
 const Footer = () => {
   return (
     <footer className="footer">
-      <h5>© 2024 GIGI CODE. Tous droits réservés.</h5>
+      <h5>© 2025 GIGI CODE. Tous droits réservés.</h5>
       <nav className="social">
         <ul>
           {socialLinks.map((link, index) => (
