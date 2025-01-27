@@ -24,7 +24,7 @@ const Header = () => {
   const menuRef = useRef(null);
 
   const toggleMenu = useCallback(() => {
-    setIsMenuOpen((prev) => !prev);
+    setIsMenuOpen((open) => !open);
   }, []);
 
   const handleClickOutside = useCallback((event) => {
