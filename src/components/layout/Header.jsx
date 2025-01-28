@@ -5,6 +5,7 @@ import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 const links = [
   { href: "#intro", label: "Accueil" },
   { href: "#projects", label: "Projets" },
+  { href: "#skills", label: "Compétences" },
   { href: "#about", label: "À propos" },
   { href: "#contact", label: "Contact" },
   { href: "https://github.com/Cosmicgigi", label: "GitHub", external: true },

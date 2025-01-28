@@ -4,7 +4,6 @@ import labellesuzette from "../../assets/lbs.webp";
 import booki from "../../assets/booki.webp";
 import ninaCarducci from "../../assets/ninacarducci.webp";
 import events from "../../assets/724events.webp";
-import portfolio from "../../assets/portfolio.webp";
 import ateliersignature from "../../assets/ateliersignature.webp";
 
 const projects = [
@@ -38,14 +37,6 @@ const projects = [
     image: kasaImage,
     url: "https://gigikasa.vercel.app",
     tags: ["React", "Sass"],
-  },
-  {
-    title: "Portfolio",
-    description:
-      "Création de mon Portfolio professionnel avec la possibilité de me contacter directement.",
-    image: portfolio,
-    url: "https://gigicode.vercel.app/",
-    tags: ["React", "Sass", "Formik"],
   },
   {
     title: "Booki",

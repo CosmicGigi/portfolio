@@ -12,9 +12,18 @@ const IntroSection = () => {
       />
       <h1>Guillaume Charpentier</h1>
       <p>
-        Développeur web passionné et créatif, je transforme vos idées en
-        solutions sur mesure, performantes et élégantes. Ensemble, construisons
-        des expériences numériques uniques.
+        Originaire du Mans et danseur professionnel hip-hop et classique depuis
+        plus de 15 ans, j'ai eu la chance de représenter mon groupe et mon pays
+        dans le monde entier, ainsi que de transmettre ma passion à travers
+        l'enseignement.
+        <br />
+        C'est en 2024 que j'ai décidé de me reconvertir, en suivant une
+        formation diplomante avec OpenClassrooms. Cela m'a permis d'acquérir un
+        professionnalisme et une rigueur, essentiels dans le domaine du
+        développement web.
+        <br />
+        J'ai désormais à coeur de mettre à profit toutes mes compétences pour
+        vous accompagner dans vos projets.
       </p>
     </header>
   );

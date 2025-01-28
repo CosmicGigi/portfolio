@@ -58,7 +58,7 @@ const ContactSection = () => {
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
       >
-        {({ isSubmitting, status }) => (
+        {({ isSubmitting }) => (
           <Form className="contact-form">
             <div className="form-group">
               <label htmlFor="name">Nom</label>
