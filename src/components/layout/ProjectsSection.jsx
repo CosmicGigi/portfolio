@@ -5,8 +5,16 @@ import booki from "../../assets/booki.webp";
 import ninaCarducci from "../../assets/ninacarducci.webp";
 import events from "../../assets/724events.webp";
 import ateliersignature from "../../assets/ateliersignature.webp";
+import drbouscaillou from "../../assets/drbouscaillou.webp";
 
 const projects = [
+  {
+    title: "Dr. Camille Bouscaillou",
+    description: "Le site vitrine de Camille Bouscaillou, dentiste à Bordeaux.",
+    image: drbouscaillou,
+    url: "https://drcamillebouscaillou.fr",
+    tags: ["React", "Tailwind CSS", "Hero UI", "SEO"],
+  },
   {
     title: "Atelier Signature",
     description: "Le site dédié à mon activité en tant qu'auto-entrepreneur.",
